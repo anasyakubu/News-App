@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <!-- //////////********** JS FILE **********////////// -->
+  <script defer src="asset/js/App.js"></script>
+  <!-- //////////********** JS FILE **********////////// -->
+
+  <!-- //////////********** W3 CSS **********////////// -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <!-- //////////********** W3 CSS **********////////// -->
+
+  <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="asset/css/style.css">
+
+  <link href="assets/css/bootstrap-code.css" rel="stylesheet" />
+
+  <!-- //////////********** FONT AWESOME **********////////// -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- //////////********** FONT AWESOME **********////////// -->
+
+  <!-- //////////********** Custom Google Web Font **********////////// -->
+  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic400italic,700italic,900italic"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet">
+  <!-- //////////********** Custom Google Web Font **********////////// -->
+
+  <!-- //////////********** GOOGLE FONTS **********////////// -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- //////////********** GOOGLE FONTS **********////////// -->
+
+  <!-- //////////********** MDB **********////////// -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.css" rel="stylesheet" />
+  <!-- //////////********** MDB **********////////// -->
+
+  <!-- //////////********** POPPINS **********////////// -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,400;1,500;1,700;1,800&display=swap"
+    rel="stylesheet">
+  <!-- //////////********** POPPINS **********////////// -->
+
+  <!-- //////////********** FONT AWESOME JS **********////////// -->
+  <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+  <!-- //////////********** FONT AWESOME js **********////////// -->
+
+  <!-- //////////********** ANIMATION.CSS **********////////// -->
+  <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+  <!-- //////////********** ANIMATION.CSS **********////////// -->
+
+</head>
+
+<body>
+
+
+  <header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <!-- <a class="nav-link" href="#">News <i class="fas fa-angle-down"></i></a> -->
+              <div class="dropdown">
+                <a class="nav-link dropdown-toggle" type="button" id="dropdownMenu2" data-mdb-toggle="dropdown"
+                  aria-expanded="false">
+                  News
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                  <li><button class="dropdown-item" type="button">Action</button></li>
+                  <li><button class="dropdown-item" type="button">Another action</button></li>
+                  <li><button class="dropdown-item" type="button">Something else here</button></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ">Programmes</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link">Live Streaming</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link ">U-Report</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link ">Magazines </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link text-success position-relative animate__animated animate__bounce animate__infinite">Live
+                <span
+                  class="position-absolute top-0 start-100 translate-middle bg-danger border border-light rounded-circle"></span></a>
+            </li>
+          </ul>
+          <form class="d-flex input-group w-auto">
+            <input type="search" class="form-control" placeholder="Type query" aria-label="Search" />
+            <button class="btn btn-outline-primary" type="button" data-mdb-ripple-color="dark">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Background image -->
+    <div class="p-5 text-center bg-image" style="
+        background-image: url('asset/img/world.jpg');
+        height: 100vh;
+      ">
+      <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+        <div class="d-flex justify-content-center align-items-center h-100">
+          <div class="text-white">
+            <h1 class="mb-3 hero-h1 animate__animated animate__bounce">World News</h1>
+            <h4 class="mb-3 hero-h4">Get News From All over the World</h4>
+            <a class="btn btn-outline-light btn-lg" href="#" role="button">Get Access To our newsletter</a>
+            <div class="icon mt-5"><a href="#getting-started" class="icon-btn"><i class="fas fa-arrow-down"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Background image -->
+  </header>
+
+  <div class="w3-row p-5" id="world">
+
+    <div class="title m-3 text-center">
+      <h2>Top stories</h2>
+      <small>Top stories around the World</small>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4 worldNewsCard">
+      <!-- <div class="col">
+        <div class="card">
+          <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp" class="card-img-top"
+            alt="Hollywood Sign on The Hill" />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              This is a longer card with supporting text below as a natural lead-in to
+              additional content. This content is a little bit longer.
+            </p>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </div>
+
+
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <!-- //////////********** MDN JS **********////////// -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"></script>
+  <!-- //////////********** MDN JS **********////////// -->
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+
+  <!-- //////////********** JQUERY **********////////// -->
+  <script src=" https://code.jquery.com/jquery-3.6.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
+  </script>
+  <!-- //////////********** JQUERY **********////////// -->
+</body>
+
+</html>
