@@ -24,7 +24,7 @@ fetch('https://api.nytimes.com/svc/topstories/v2/world.json?api-key=vUg7zhlHSKqp
           <blockquote class="blockquote mb-0">
           <footer class="blockquote-footer">${dataValue.byline}<cite title="Source Title">| ${dataValue.created_date}</cite></footer>
         </blockquote>
-          <a href="${dataValue.url}" target="_blank" class="btn btn-primary">Read More</a
+          <a href="${dataValue.url}" target="_blank" class="btn btn-primary shadow-0">Read More</a
         </div>
       </div>
     </div> `;
