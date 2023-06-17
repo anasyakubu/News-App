@@ -8,7 +8,7 @@ fetch('https://api.nytimes.com/svc/topstories/v2/world.json?api-key=vUg7zhlHSKqp
     firstTenTopStories.forEach(dataValue => {
       const markup01 = `<div class="col">
       <div class="card">
-        <img src="${dataValue.multimedia[9]}" class="card-img-top"
+        <img src="${dataValue.multimedia[0].url}" class="card-img-top"
           alt="" />
         <div class="card-body">
           <h5 class="card-title">${dataValue.title}</h5>
@@ -28,33 +28,4 @@ fetch('https://api.nytimes.com/svc/topstories/v2/world.json?api-key=vUg7zhlHSKqp
     // Handle error
     console.error(error);
   });
-
-// fetch('https://api.nytimes.com/svc/topstories/v2/world.json?api-key=vUg7zhlHSKqpVKr23LyzUqniX3ReARwA')
-//   .then(response => response.json())
-//   .then(data => {
-//     const articles = data.results;
-//     articles.forEach(article => {
-//       const imageUrl = article.multimedia.length > 0 ? article.multimedia[0].url : ''; // Get the first image URL if available
-//       const markup = `
-//         <div class="col">
-//           <div class="card">
-//             <img src="${imageUrl}" class="card-img-top" alt="" />
-//             <div class="card-body">
-//               <h5 class="card-title">${article.title}</h5>
-//               <p class="card-text">${article.abstract}</p>
-//               <p class="card-text">
-//                 <small class="text-muted">${article.section}</small>
-//               </p>
-//               <a href="${article.url}" target="_blank" class="btn btn-primary shadow-0">Read More</a>
-//             </div>
-//           </div>
-//         </div>
-//       `;
-//       document.querySelector('.worldCard').insertAdjacentHTML('beforeend', markup);
-//     });
-//   })
-//   .catch(error => {
-//     console.error(error);
-//   });
-
 // ******************************* TOP STORY API *******************************//
