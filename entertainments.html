@@ -78,7 +78,7 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Home</a>
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
             </li>
             <li class="nav-item">
               <!-- <a class="nav-link" href="#">News <i class="fas fa-angle-down"></i></a> -->
@@ -135,7 +135,20 @@
         <div class="d-flex justify-content-center align-items-center h-100">
           <div class="text-white">
             <h1 class="mb-3 hero-h1 animate__animated animate__bounce">Entertainments</h1>
-            <input type="search" class="form-control" placeholder="Search for Movie Recommendations">
+            <form class="searchMovieForm" onsubmit="searchFunction(); return false;">
+              <!-- <input type="search" class="form-control" placeholder="Search for Movie Recommendations">
+              <button class="btn btn-primary m-3">Search</button> -->
+              <div class="input-group">
+                <div class="form-outline">
+                  <input id="searchInput" type="search" class="form-control text-dark bg-white"
+                    placeholder="Search for Movie" />
+                </div>
+                <button id="searchBtn" type="submit" class="btn btn-primary" data-toggle="collapse"
+                  data-target="#movieSection">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -150,7 +163,6 @@
     </div>
 
     <div class="row row-cols-1 row-cols-md-3 g-4 sportCard">
-
       <!-- <div class="col">
         <div class="card">
           <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp" class="card-img-top"
@@ -164,10 +176,38 @@
           </div>
         </div>
       </div> -->
+    </div>
+  </div>
 
+  <!-- MOVIE SECTION -->
+  <div class="w3-row p-5 w3-hide" id="movieSection" tabindex="-1" aria-labelledby="exampleModalLabel2"
+    aria-hidden="true">
+    <div class="title m-3 text-center">
+      <h2>Movies</h2>
+      <!-- <small>Top stories around the World</small> -->
+    </div>
+    <div class="m-3">
+      <h4>Search result for "<span class="resultSearch"></span>"</h4>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4 searchMovieSection">
+      <!-- <div class="col">
+        <div class="card">
+          <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp" class="card-img-top"
+            alt="Hollywood Sign on The Hill" />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              This is a longer card with supporting text below as a natural lead-in to
+              additional content. This content is a little bit longer.
+            </p>
+          </div>
+        </div>
+      </div> -->
     </div>
 
   </div>
+  <!-- MOVIE SECTION -->
 
   <!-- FOOTER -->
   <!-- Footer -->
