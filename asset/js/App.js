@@ -54,3 +54,79 @@ function searchFunction() {
 
 }
 //*************************** SEARCH FOR MOVIE FUNCTION **************************** // 
+
+//*************************** SPORT SECTION **************************** // 
+function sportSection() {
+
+  fetch('https://api.nytimes.com/svc/topstories/v2/sports.json?api-key=vUg7zhlHSKqpVKr23LyzUqniX3ReARwA')
+    .then(response => response.json())
+    .then(data => {
+      // Extract the first 10 arrays
+      const firstTenSport = data.results.slice(1, 9);
+      console.log(firstTenSport);
+      firstTenSport.forEach(dataValue => {
+        const markup05 = `
+
+    <div class="col">
+    <div class="card">
+      <img src="${dataValue.multimedia[0].url}" class="card-img-top"
+        alt="Hollywood Sign on The Hill" />
+      <div class="card-body">
+        <h5 class="card-title">${dataValue.title}</h5>
+        <p class="card-text">
+          <small class="text-muted">${dataValue.subsection}</small>
+        </p>
+        <a href="${dataValue.url}" target="_blank" class="btn btn-primary shadow-0">Read More</a>
+      </div>
+    </div>
+  </div>
+
+      `;
+
+        document.querySelector('.sportSection').insertAdjacentHTML('beforeend', markup05);
+      })
+    })
+    .catch(error => {
+      // Handle error
+      console.error(error);
+    });
+
+
+}
+//*************************** SPORT SECTION **************************** // 
+
+//*************************** TOP STORIES **************************** // 
+function topStoriesSection() {
+
+  fetch('https://api.nytimes.com/svc/topstories/v2/world.json?api-key=vUg7zhlHSKqpVKr23LyzUqniX3ReARwA')
+    .then(response => response.json())
+    .then(data => {
+      // Extract the first 10 arrays
+      const firstTenTopStories = data.results.slice(1, 9);
+      console.log(firstTenTopStories);
+      firstTenTopStories.forEach(dataValue => {
+        const markup06 = `
+    <div class="card">
+    <img src="${dataValue.multimedia[0].url}" class="card-img-top"
+      alt="Hollywood Sign on The Hill" />
+     <div class="card-body">
+      <h5 class="card-title">${dataValue.title}</h5>
+      <a href="${dataValue.url}" target="_blank" class="btn btn-primary shadow-0">Read More</a>
+      <!-- <p class="card-text">${dataValue.abstract}</p>
+    </div> -->
+  </div>
+</div>
+ `;
+
+        document.querySelector('.topStorySection').insertAdjacentHTML('beforeend', markup06);
+      })
+    })
+    .catch(error => {
+      // Handle error
+      console.error(error);
+    });
+
+}
+
+//*************************** TOP STORIES **************************** // 
+
