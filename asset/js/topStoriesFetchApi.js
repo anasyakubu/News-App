@@ -22,10 +22,13 @@ fetch('https://api.nytimes.com/svc/topstories/v2/world.json?api-key=vUg7zhlHSKqp
     </div> `;
 
       document.querySelector('.worldNewsCard').insertAdjacentHTML('beforeend', markup01);
+      // const spinner = document.querySelector('.spinner');
+      document.querySelector('.spinner').classList.add('d-none')
     })
   })
   .catch(error => {
     // Handle error
     console.error(error);
   });
+
 // ******************************* TOP STORY API *******************************//

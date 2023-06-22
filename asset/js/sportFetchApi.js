@@ -26,6 +26,8 @@ fetch('https://api.nytimes.com/svc/topstories/v2/sports.json?api-key=vUg7zhlHSKq
       `;
 
       document.querySelector('.sportCard').insertAdjacentHTML('beforeend', markup02);
+      // const spinner = document.querySelector('.spinner');
+      document.querySelector('.spinner').classList.add('d-none')
     })
   })
   .catch(error => {

@@ -1,9 +1,10 @@
-// ******************************* SPORT API *******************************//
+// ******************************* ENTERTAINMENT API *******************************//
 // Make API request
 
-fetch('https://api.nytimes.com/svc/topstories/v2/sports.json?api-key=vUg7zhlHSKqpVKr23LyzUqniX3ReARwA')
+fetch('https://api.nytimes.com/svc/topstories/v2/entertainment.json?api-key=vUg7zhlHSKqpVKr23LyzUqniX3ReARwA')
   .then(response => response.json())
   .then(data => {
+    console.log(data);
     // Extract the first 10 arrays
     const firstTenSport = data.response.slice(1, 15);
     console.log(firstTenSport);
@@ -23,6 +24,8 @@ fetch('https://api.nytimes.com/svc/topstories/v2/sports.json?api-key=vUg7zhlHSKq
       `;
 
       document.querySelector('.EntertainmentCard').insertAdjacentHTML('beforeend', markup04);
+      // const spinner = document.querySelector('.spinner');
+      document.querySelector('.spinner').classList.add('d-none')
     })
   })
   .catch(error => {
@@ -30,4 +33,4 @@ fetch('https://api.nytimes.com/svc/topstories/v2/sports.json?api-key=vUg7zhlHSKq
     console.error(error);
   });
 
-  // ******************************* SPORT API *******************************//
+  // ******************************* ENTERTAINMENT API *******************************//

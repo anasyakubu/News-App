@@ -21,8 +21,16 @@ function searchFunction() {
     .then(data => {
       console.log(data);
       // Do something with the answer, e.g., display it on the page
-      data.forEach(dataValue => {
-        const markup03 = ` 
+      if (data.innerHTML == 'null') {
+        const markup07 = `
+        <div>
+        <h4>Result not Found 😥</h4>
+      </div>
+        `;
+        document.querySelector('.notFound').insertAdjacentHTML('beforeend', markup07);
+      } else {
+        data.forEach(dataValue => {
+          const markup03 = ` 
       <div class="col">
       <div class="card">
         <img src="${dataValue.multimedia.src}" alt="${dataValue.display_title}" class="card-img-top"
@@ -37,23 +45,22 @@ function searchFunction() {
           <a href="${dataValue.link.url}" target="_blank" class="btn btn-warning shadow-0">Watch Now</a>
         </div>
       </div>
-    </div>
-
-         `;
-
-        document.querySelector('.searchMovieSection').insertAdjacentHTML('beforeend', markup03);
-      });
+    </div>`;
+          document.querySelector('.searchMovieSection').insertAdjacentHTML('beforeend', markup03);
+          // const spinner = document.querySelector('.spinner');
+          document.querySelector('.spinner').classList.add('d-none');
+        });
+      }
     })
     .catch(error => {
       // Handle error
       console.error(error);
     });
-
   movieSection.classList.remove("w3-hide");
   movieSection.scrollIntoView({ behavior: 'smooth' });
-
 }
 //*************************** SEARCH FOR MOVIE FUNCTION **************************** // 
+
 
 //*************************** SPORT SECTION **************************** // 
 function sportSection() {
@@ -80,20 +87,19 @@ function sportSection() {
       </div>
     </div>
   </div>
-
       `;
-
         document.querySelector('.sportSection').insertAdjacentHTML('beforeend', markup05);
+        // const spinner = document.querySelector('.spinner');
+        document.querySelector('.spinner').classList.add('d-none');
       })
     })
     .catch(error => {
       // Handle error
       console.error(error);
     });
-
-
 }
 //*************************** SPORT SECTION **************************** // 
+
 
 //*************************** TOP STORIES **************************** // 
 function topStoriesSection() {
@@ -117,8 +123,9 @@ function topStoriesSection() {
   </div>
 </div>
  `;
-
         document.querySelector('.topStorySection').insertAdjacentHTML('beforeend', markup06);
+        // const spinner = document.querySelector('.spinner');
+        document.querySelector('.spinner').classList.add('d-none');
       })
     })
     .catch(error => {
